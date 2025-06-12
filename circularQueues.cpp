@@ -32,18 +32,18 @@ public:
         // 2.Cek apakah antrian kosong
         if (FRONT == -1)
         {
-            FRONT = 0; // 2.a
+            FRONT = 0; // 2.a //Kalau front dan rear si indeks 0, maka cuma ada 1
             REAR = 0;  // 2.b
         }
         else
         {
             // jika REAR berada di posisi terakhir array, kembali ke awal array
             if (REAR == max - 1)
-                REAR = 0;
+                REAR = 0; //Ini yang buat array nya circular
             else
                 REAR = REAR + 1;
         }
-        queue_array[REAR] = num;
+        queue_array[REAR] = num; //masukkan data ke array rear
     }
 
     void remove()
@@ -59,7 +59,7 @@ public:
         // cek jika antrian hanya memiliki satu elemen
         if (FRONT == REAR)
         {
-            FRONT = -1;
+            FRONT = -1;//biar kehapus semua, karena tadi cuma sisa satu elemen saja
             REAR = -1;
         }
         else
@@ -168,4 +168,6 @@ int main()
             cout << "Check for the values entered." << endl;
         }
     }
+
+    return 0;
 }
