@@ -159,9 +159,9 @@ int main(){
             }
             }
         }
-        catch(const std::exception& e)
+        catch(exception& e)
         {
-            std::cerr << e.what() << '\n';
+            cout<< "Check for the value entered."<<endl;
         }
         
     }
